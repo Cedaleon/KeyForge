@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyForge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="icon" href="icon.png" type="image/png"> <!-- Aquí se establece el icono de la pestaña -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="card" id="passwordManager" class="dark">
+        <div class="card-header">
+            <div>
+                <h1 class="card-title">KeyForge</h1>
+                <p class="card-description">Generador y Gestor de Contraseñas</p>
+            </div>
+            <button id="themeToggle" class="btn btn-icon">
+                <span><i id="themeIcon" class="mdi mdi-white-balance-sunny"></i></span>
+            </button>
+        </div>
+        <div class="card-content">
+            <div class="tabs">
+                <div class="tabs-list">
+                    <button class="tab active" data-tab="generate">Generar</button>
+                    <button class="tab" data-tab="manage">Gestionar</button>
+                </div>
+                <div class="tab-content active" id="generateTab">
+                    <div class="password-generator">
+                        <div class="input-group">
+                            <input type="text" id="currentPassword" readonly placeholder="Contraseña generada">
+                            <button id="generateBtn" class="btn btn-primary">
+                                <i class="mdi mdi-refresh"></i> Generar
+                            </button>
+                        </div>
+
+                        <!-- Nuevo texto añadido aquí -->
+                        <p class="select-network-text">Escoja la red social para la contraseña</p>
+
+                        <div class="social-buttons">
+                            <button class="btn btn-outline" data-network="Facebook">
+                                <i class="icon icon-gen icon-facebook"></i> <label>Facebook</label>
+                            </button>
+                            <button class="btn btn-outline" data-network="Twitter">
+                                <i class="icon icon-gen icon-twitter"></i> Twitter
+                            </button>
+                            <button class="btn btn-outline" data-network="Instagram">
+                                <i class="icon icon-gen icon-instagram"></i> Instagram
+                            </button>
+                            <button class="btn btn-outline" data-network="YouTube">
+                                <i class="icon icon-y icon-youtube"></i> YouTube
+                            </button>
+                            <button class="btn btn-outline" data-network="GitHub">
+                                <i class="icon icon-gen icon-github"></i> GitHub
+                            </button>
+                            <button class="btn btn-outline" data-network="Gmail">
+                                <i class="icon icon-g icon-gmail"></i> Gmail
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-content" id="manageTab">
+                    <div class="password-manager">
+                        <div class="password-item">
+                            <i class="icon icon-facebook"></i>
+                            <label>Facebook:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                        <div class="password-item">
+                            <i class="icon icon-twitter"></i>
+                            <label>Twitter:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                        <div class="password-item">
+                            <i class="icon icon-instagram"></i>
+                            <label>Instagram:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                        <div class="password-item">
+                            <i class="icon icon-youtube"></i>
+                            <label>YouTube:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                        <div class="password-item">
+                            <i class="icon icon-github"></i>
+                            <label>GitHub:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                        <div class="password-item">
+                            <i class="icon icon-gmail"></i>
+                            <label>Gmail:</label>
+                            <input type="text" readonly placeholder="Sin contraseña guardada">
+                            <button class="btn btn-icon btn-outline" disabled>
+                                <i class="mdi mdi-content-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            Recuerda siempre usar contraseñas únicas y seguras para cada cuenta.<br>By. Cedalion</br>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

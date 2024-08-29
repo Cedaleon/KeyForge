@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: 'Poppins', normal;
+}
+
+
+:root {
+    --primary: #00e6e6;
+    --primary-hover: #00cccc;
+    --background: #f0f0f0;
+    --foreground: #000000;
+    --card-background: #ffffff;
+    --card-foreground: #000000;
+    --border: #e5e7eb;
+    --input-background: #ffffff;
+    --input-foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #00ffff;
+        --primary-hover: #33ffff;
+        --background: #000000;
+        --foreground: #ffffff;
+        --card-background: #1F2937;
+        --card-foreground: #ffffff;
+        --border: #333333;
+        --input-background: #374151;
+        --input-foreground: #ffffff;
+    }
+}
+
+
+/* Estilos del fondo cuadriculado*/
+/* Estilos del fondo cuadriculado*/
+/* Estilos del fondo cuadriculado*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    /* Establecido por JavaScript, si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow-x: hidden;
+    background: hsl(0 0% 2%);
+    /* Color de fondo oscuro */
+}
+
+body::before {
+    --line: hsl(0 0% 95% / 0.25);
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background:
+        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
+        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+    mask: linear-gradient(-15deg, transparent 30%, white);
+    top: 0;
+    z-index: -1;
+}
+
+/* Fin de Estilos del fondo cuadriculado*/
+/* Fin de Estilos del fondo cuadriculado*/
+/* Fin de Estilos del fondo cuadriculado*/
+
+
+
+span {
+    float: right;
+}
+
+/* Tema claro */
+.light {
+    --primary: #00e6e6;
+    --primary-hover: #00cccc;
+    --background: #f0f0f0;
+    --foreground: #000000;
+    --card-background: #ffffff;
+    --card-foreground: #000000;
+    --border: #e5e7eb;
+    --input-background: #ffffff;
+    --input-foreground: #000000;
+    background-color: var(--background);
+}
+
+/* Tema oscuro */
+.dark {
+    --primary: #00ffff;
+    --primary-hover: #33ffff;
+    --background: #000000;
+    --foreground: #ffffff;
+    --card-background: #1F2937;
+    --card-foreground: #ffffff;
+    --border: #333333;
+    --input-background: #000000;
+    --input-foreground: #ffffff;
+    background-color: var(--background);
+}
+
+
+.card {
+    background-color: var(--card-background);
+    color: var(--card-foreground);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Titulo con efecto  */
+/* Titulo con efecto  */
+/* Titulo con efecto  */
+/* Titulo con efecto  */
+.card-title {
+    margin-top: -5px;
+    font-size: 2.5rem;
+    /* Ajusta el tamaño de fuente según tu diseño */
+    font-weight: bold;
+    color: #ffffff;
+    /* Color del texto */
+    position: relative;
+    text-shadow: 0 0 2px rgba(0, 255, 255, 0.5),
+        /* Efecto de resplandor sutil */
+        0 0 4px rgba(0, 255, 255, 0.4),
+        0 0 6px rgba(0, 255, 255, 0.3),
+        0 0 8px rgba(0, 255, 255, 0.2);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px rgba(0, 255, 255, 0.5),
+            0 0 4px rgba(0, 255, 255, 0.4),
+            0 0 6px rgba(0, 255, 255, 0.3),
+            0 0 8px rgba(0, 255, 255, 0.2);
+    }
+
+    to {
+        text-shadow: 0 0 4px rgba(0, 255, 255, 0.7),
+            0 0 8px rgba(0, 255, 255, 0.6),
+            0 0 12px rgba(0, 255, 255, 0.5),
+            0 0 16px rgba(0, 255, 255, 0.4);
+    }
+}
+
+.card-description {
+    color: var(--foreground);
+    margin-top: -20px;
+    opacity: 0.7;
+}
+
+.card-content {
+    margin-top: -10px;
+    padding: 20px;
+}
+
+.card-footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--foreground);
+    opacity: 0.7;
+}
+
+.btn {
+    padding: 8px 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #000000;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 0 15px var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--card-foreground);
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.btn-icon {
+
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* Color de fondo por defecto */
+    border: none;
+    /* Sin borde por defecto */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    /* Transiciones suaves */
+}
+
+.btn-icon i {
+    font-size: 24px;
+    /* Tamaño de los íconos */
+}
+
+/* Estilo específico para el ícono del sol */
+#themeToggle .mdi-white-balance-sunny {
+    color: #FFD700;
+    /* Color amarillo para el ícono del sol */
+}
+
+/* Estilo específico para el ícono de la luna */
+#themeToggle .mdi-moon {
+    color: #000000;
+    /* Color negro para el ícono de la luna */
+}
+
+.btn-icon:active {
+    background-color: #212121;
+    /* Color cuando el botón está activo y presionado */
+    box-shadow: 0 4px 6px rgba(49, 255, 255, 0.5);
+    /* Sombra suave en la parte inferior */
+    transform: scale(0.95);
+    /* Efecto de contracción al estar activo */
+}
+
+.btn-icon:hover {
+    background-color: #31FFFF;
+    /* Color azul claro al pasar el cursor */
+    box-shadow: 0 4px 6px rgba(49, 255, 255, 0.5);
+    /* Sombra suave en la parte inferior */
+}
+
+
+
+/*Estilos para Escoja la red social para la contraseña*/
+/*Estilos para Escoja la red social para la contraseña*/
+/*Estilos para Escoja la red social para la contraseña*/
+.select-network-text {
+    margin-top: 20px;
+    /* Espacio superior */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    color: #333;
+    /* Color del texto en tema claro */
+    text-align: center;
+    /* Centrar el texto horizontalmente */
+    width: 100%;
+    /* Asegura que el párrafo ocupe todo el ancho del contenedor */
+}
+
+.dark .select-network-text {
+    color: #ffffff;
+    /* Color del texto en tema oscuro */
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    /* Espacio superior para separar del texto */
+}
+
+.network-label {
+    margin-left: 8px;
+    /* Espacio entre el ícono y el texto */
+    font-size: 14px;
+    /* Tamaño del texto */
+}
+
+/*Aqui terminan los Estilos para Escoja la red social para la contraseña*/
+
+
+
+
+
+/* Estilos para el tema claro */
+.card.light .password-item button {
+    color: #333;
+    /* Color del ícono en el tema claro */
+    background: #f9f9f9;
+    /* Fondo del botón en el tema claro */
+}
+
+.card.light .password-item button:hover {
+    background: #e0e0e0;
+    /* Fondo del botón al pasar el cursor en el tema claro */
+}
+
+/* Estilos para el tema oscuro */
+.card.dark .password-item button {
+    color: #000000;
+    /* Color del ícono en el tema oscuro (contrastante con el fondo oscuro) */
+    background: #ffffff;
+    /* Fondo del botón en el tema oscuro */
+}
+
+.card.dark .password-item button:hover {
+    background: #555;
+    /* Fondo del botón al pasar el cursor en el tema oscuro */
+}
+
+/* Asegúrate de que los íconos dentro de los botones sean visibles */
+.password-item button i {
+    font-size: 1.2rem;
+    color: inherit;
+    /* Hereda el color del botón */
+}
+
+/* Estilos comunes para los botones */
+.password-item button {
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: var(--input-background);
+    color: var(--input-foreground);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tabs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--card-foreground);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(49, 255, 255, 0.5);
+    /* Sombreado suave en la parte inferior */
+}
+
+.tab:hover {
+    background-color: rgba(49, 255, 255, 0.1);
+    /* Color de fondo en hover */
+    box-shadow: 0 6px 8px rgba(49, 255, 255, 0.3);
+    /* Sombreado más pronunciado en hover */
+}
+
+.tab.active {
+    border-bottom-color: var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.password-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.password-item label {
+    min-width: 80px;
+}
+
+.password-item input {
+    flex-grow: 1;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(73%) sepia(19%) saturate(4824%) hue-rotate(155deg) brightness(101%) contrast(101%);
+    /* Aplica un filtro cian (#33FFFF) */
+    transition: transform 0.3s, filter 0.3s;
+    /* Añade transición para transformaciones y filtros */
+}
+
+.icon:hover {
+    filter: invert(73%) sepia(19%) saturate(4824%) hue-rotate(155deg) brightness(120%) contrast(110%);
+    /* Efecto hover más brillante */
+    transform: scale(1.2);
+    /* Aumenta el tamaño del ícono al pasar el cursor sobre él */
+}
+
+.icon-gen {
+    margin-bottom: -7px;
+    margin-right: 20px;
+}
+
+.icon-facebook {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/facebook.svg');
+}
+
+.icon-twitter {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/twitter.svg');
+}
+
+.icon-instagram {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/instagram.svg');
+}
+
+.icon-youtube {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/youtube.svg');
+}
+
+.icon-y {
+    margin-right: 28px;
+}
+
+.icon-github {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/github.svg');
+}
+
+.icon-gmail {
+    background-image: url('https://cdn.jsdelivr.net/npm/@mdi/svg@6.5.95/svg/gmail.svg');
+}
+
+.icon-g {
+    margin-right: 49px;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
