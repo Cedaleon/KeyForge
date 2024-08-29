@@ -1,6 +1,8 @@
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d4ff6c50-16d4-47dd-b16f-9d5a9972b8e0" alt="KeyForge 2" width="300" style="margin-right: 10px;">
+    <img src="https://github.com/user-attachments/assets/cc69f742-e38c-4e03-b6a1-a971792d62ce" alt="KeyForge" width="300">
+</p>
 
-![keyforge2](https://github.com/user-attachments/assets/d4ff6c50-16d4-47dd-b16f-9d5a9972b8e0)
-![keyforge](https://github.com/user-attachments/assets/cc69f742-e38c-4e03-b6a1-a971792d62ce)
 
 
 
