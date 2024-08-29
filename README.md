@@ -10,7 +10,7 @@
 
 **KeyForge** es una herramienta para la generación y gestión de contraseñas. Permite crear contraseñas seguras, guardarlas para diferentes redes sociales y alternar entre temas claros y oscuros. 
 
-![KeyForge Screenshot](screenshot.png) <!-- Asegúrate de tener una captura de pantalla en el repositorio o elimina esta línea -->
+
 
 ## Características
 
