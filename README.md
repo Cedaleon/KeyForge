@@ -1,6 +1,7 @@
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/a684f9e4-1bfe-42f5-b1f1-72188bb91170" alt="KeyForge" width="400">
-</p>
+
+![keyforge2](https://github.com/user-attachments/assets/d4ff6c50-16d4-47dd-b16f-9d5a9972b8e0)
+![keyforge](https://github.com/user-attachments/assets/cc69f742-e38c-4e03-b6a1-a971792d62ce)
+
 
 
 # KeyForge
