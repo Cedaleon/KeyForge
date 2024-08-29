@@ -78,12 +78,3 @@ Las contribuciones son bienvenidas. Para contribuir al proyecto, sigue estos pas
 
 5. **Crea un Pull Request**: Abre un Pull Request desde tu rama a la rama principal del repositorio.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
-## Contacto
-
-Para cualquier pregunta o sugerencia, puedes contactar al autor en [tu_email@example.com](mailto:tu_email@example.com).
-
-
