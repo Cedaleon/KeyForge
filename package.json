@@ -1,0 +1,29 @@
+{
+  "name": "keyforge",
+  "version": "1.0.0",
+  "description": "KeyForge es una herramienta para la generación y gestión de contraseñas. Permite crear contraseñas seguras, guardarlas para diferentes redes sociales y alternar entre temas claros y oscuros.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIEGOGARCIA601050/KeyForge.git"
+  },
+  "keywords": [
+    "Javascript",
+    "node",
+    "electron",
+    "webApp"
+  ],
+  "author": "Cedaleon & DIEGOGARCIA601050",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DIEGOGARCIA601050/KeyForge/issues"
+  },
+  "homepage": "https://github.com/DIEGOGARCIA601050/KeyForge#readme",
+  "dependencies": {
+    "electron": "^32.0.1"
+  }
+}
