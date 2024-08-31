@@ -4,6 +4,9 @@
   "description": "KeyForge es una herramienta para la generación y gestión de contraseñas. Permite crear contraseñas seguras, guardarlas para diferentes redes sociales y alternar entre temas claros y oscuros.",
   "main": "index.js",
   "scripts": {
+    "packWindows": "electron-packager . --platform=win32 --arch=x64",
+    "packMac": "electron-packager . --platform=darwin --arch=x64",
+    "packLinux": "electron-packager . --platform=linux --arch=x64",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,5 +28,8 @@
   "homepage": "https://github.com/DIEGOGARCIA601050/KeyForge#readme",
   "dependencies": {
     "electron": "^32.0.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.2"
   }
 }
