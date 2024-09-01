@@ -45,6 +45,14 @@ Para instalar y ejecutar KeyForge localmente, sigue estos pasos:
 
     Abre el archivo `index.html` en tu navegador para ver la aplicación en acción.
 
+# Abrir como app con electron
+
+    Ejecuta la app con electron a través del siguiente comando
+
+    ```bash
+    npm run start
+    ```
+
 ## Uso
 
 1. **Generar Contraseñas**: Ve a la pestaña "Generar" y haz clic en "Generar" para crear una nueva contraseña.
@@ -77,6 +85,28 @@ Las contribuciones son bienvenidas. Para contribuir al proyecto, sigue estos pas
     ```
 
 5. **Crea un Pull Request**: Abre un Pull Request desde tu rama a la rama principal del repositorio.
+
+## Proceso de Empaquetado
+
+Actualmente solo es posible empaquetar para Linux MacOS y Windows
+
+# Para Windows
+
+```bash
+npm run packWindows
+```
+
+# Para MacOS
+
+```bash
+npm run packMac
+```
+
+# Para Linux
+
+```bash
+npm run packLinux
+```
 
 ## Licencia
 
